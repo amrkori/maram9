@@ -12,30 +12,976 @@ const MusicPlayer: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
-
   const songs = [
+  {
+    "title": "Sadakny Khalas",
+    "artist": "Amr Diab",
+    "duration": "3:51",
+    "src": `${import.meta.env.BASE_URL}songs/08.Sadakny_Khalas.mp3`
+  },
+  {
+    "title": "Aghla Min Omry",
+    "artist": "Amr Diab",
+    "duration": "4:46",
+    "src": `${import.meta.env.BASE_URL}songs/10_Aghla_Min_Omry.mp3`
+  },
     {
-      "title": "Meen Momken",
-      "artist": "Tamer Hosny",
-      "duration": "4:27",
-      "src": `${import.meta.env.BASE_URL}songs/01.Meen_Momken.mp3`
+    "title": "Tehayark",
+    "artist": "Amr Diab",
+    "duration": "3:31",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Amr.Diab.Tehayark.mp3`
 
-    },  {
-    "title": "Ewediny",
-    "artist": "Hamaki",
+  },
+    {
+    "title": "Tamally Maak",
+    "artist": "Amr Diab",
+    "duration": "4:31",
+    "src": `${import.meta.env.BASE_URL}songs/02.Tamally_Maak.mp3`
+
+  },
+  {
+    "title": "Khalina Lewahdina",
+    "artist": "Amr Diab",
+    "duration": "5:19",
+    "src": `${import.meta.env.BASE_URL}songs/07_Khalina_Lewahdina.mp3`
+
+  },
+    {
+    "title": "Ray2ah",
+    "artist": "Amr Diab",
+    "duration": "4:06",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Amr_Diab_Ray2ah.mp3`
+
+  },
+  {
+    "title": "Btmn alyk",
+    "artist": "Amr Diab",
+    "duration": "4:02",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_btmn_alyk.mp3`
+
+  },
+  {
+    "title": "khtafony",
+    "artist": "Amr Diab",
+    "duration": "4:20",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_khtfwny.mp3`
+
+  },  {
+    "title": "lama 2abeltak",
+    "artist": "Amr Diab",
+    "duration": "3:52",
+    "src": `${import.meta.env.BASE_URL}songs/Nghmat.Com_Amr.Diab_lama.2abeltak.mp3`
+
+  },
+
+    {
+    "title": "Ebtadyna",
+    "artist": "Amr Diab",
+    "duration": "3:53",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_abtdyna.mp3`
+
+  },
+    {
+    "title": "Allemny Hawak",
+    "artist": "Amr Diab",
+    "duration": "3:20",
+    "src": `${import.meta.env.BASE_URL}songs/08.Allemny_Hawak.mp3`
+
+  },
+
+    {
+    "title": "Ahla Haga",
+    "artist": "Amr Diab",
+    "duration": "5:46",
+    "src": `${import.meta.env.BASE_URL}songs/10_Ahla_Haga.mp3`
+  },
+  {
+    "title": "Habibty mllak",
+    "artist": "Amr Diab",
+    "duration": "4:15",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_hbیbty_mlak.mp3`
+
+  },
+  {"title": "WLA men",
+    "artist": "Zyad Zaza",
+    "duration": "3:13",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_zyad_zaza_wla_myn_-_ma__lygy_sy.mp3`
+
+  },
+  {
+    "title": "Elly Msbrny",
+    "artist": "Songs of Ur favorite film",
+    "duration": "3:26",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Ahmed.Fahmy.Elly.Msbrny.mp3`
+
+  },
+  {
+    "title": "Handoos",
+    "artist": "Songs of Ur favorite film",
+    "duration": "3:37",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Ahmed.Fahmy.Handoos.mp3`
+
+  },
+      {
+    "title": "Ghabt shamsna",
+    "artist": "Songs of Ur favorite film",
+    "duration": "4:43",
+    "src": `${import.meta.env.BASE_URL}songs/40Z884Iu.mp3`
+
+  },
+    {
+    "title": "Ehsas Ghareeb",
+    "artist": "Songs of Ur favorite film",
+    "duration": "3:16",
+    "src": `${import.meta.env.BASE_URL}songs/828B26xq.mp3`
+
+  },
+  {
+    "title": "7ayaty",
+    "artist": "Elissa",
+    "duration": "3:34",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.7ob.kol.7ayaty.mp3`
+
+  },
+  {
+    "title": "Ayshalak",
+    "artist": "Elissa",
+    "duration": "4:38",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Ayshalak.mp3`
+
+  },
+  {
+  "title": "Lessa Fiha Kalam",
+    "artist": "Elissa",
+    "duration": "4:50",
+    "src": `${import.meta.env.BASE_URL}songs/06._Lessa_Fiha_Kalam.mp3"
+`
+
+  },
+    {
+    "title": "As3ad Wahda",
+    "artist": "Elissa ",
+    "duration": "4:34",
+    "src": `${import.meta.env.BASE_URL}songs/65lJ53jH.mp3"
+`
+
+  },
+  {
+    "title": "Tariqy",
+    "artist": "Sherin",
+    "duration": "4:26",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Sherin.Tariqy.mp3"
+`
+
+  },
+    {
+    "title": "Asl hyaty",
+    "artist": "Sherin",
+    "duration": "4:54",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_shyryn_asl_hyaty.mp3"
+`
+
+  },
+  {
+    "title": "Kalam Eneih",
+    "artist": "Sherine",
+    "duration": "3:55",
+    "src": `${import.meta.env.BASE_URL}songs/07._Kalam_Eneih.mp3"
+`
+
+  },
+  {
+    "title": "W Ahlam Leeh",
+    "artist": "Tamer hosny",
+    "duration": "4:57",
+    "src": `${import.meta.env.BASE_URL}songs/05.W_Ahlam_Leeh.mp3"
+`
+
+  },
+
+  {
+    "title": "fylm bhbk ant akhtyar",
+    "artist": "Tamer Hosny",
+    "duration": "4:06",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_tamr_hsni_ant_akhtyar_-_mn_fylm_bhbk.mp3`
+
+  },
+    {
+    "title": "Bagheer Aleeha",
+    "artist": "Tamer Hosny",
+    "duration": "4:39",
+    "src": `${import.meta.env.BASE_URL}songs/06.Bagheer_Aleeha.mp3`
+
+  },
+  {
+    "title": "60 De2e2a Hayah",
+    "artist": "Asala",
+    "duration": "5:55",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Asala.60_De2e2a_Hayah.mp3`
+
+  },
+    {
+    "title": "fowk",
+    "artist": "Asala",
+    "duration": "3:08",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_asalt_fwk.mp3`
+
+  },
+    {
+    "title": "ana walkmr",
+    "artist": "Hussein Al Jasmi",
+    "duration": "4:33",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_hsyn_algsmy_ana_walkmr.mp3`
+
+  },
+  {
+    "title": "A'al Gany Baad Youmin",
+    "artist": "Samira Saed",
+    "duration": "7:45",
+    "src": `${import.meta.env.BASE_URL}songs/01.A'al Gany Baad Youmin.mp3`
+
+  },
+
+  {
+    "title": "Ana Aysha Hala",
+    "artist": "Angham",
+    "duration": "4:28",
+    "src": `${import.meta.env.BASE_URL}songs/03.Ana.Aysha.Hala.mp3`
+
+  },
+  {
+    "title": "3alshank",
+    "artist": "Siilawy",
+    "duration": "3:07",
+    "src": `${import.meta.env.BASE_URL}songs/3alshank-Siilawy-MaTb3aa.Com.mp3`
+
+  },
+  {
+    "title": "Nseet Elnass",
+    "artist": "Hossam Habib",
+    "duration": "3:22",
+    "src": `${import.meta.env.BASE_URL}songs/04.Nseet_Elnass.mp3`
+
+  },
+  {
+    "title": "Ya Layali",
+    "artist": "Latifa",
+    "duration": "5:00",
+    "src": `${import.meta.env.BASE_URL}songs/04_-_Ya_Layali.mp3`
+
+  },
+
+  {
+    "title": "7lwa ya balady",
+    "artist": "Dalida",
+    "duration": "3:34",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Dalida.7lwa.ya.balady.mp3`
+
+  },
+  {
+    "title": "Behom Kolohom",
+    "artist": "Ramy Gamal",
+    "duration": "4:02",
+    "src": `${import.meta.env.BASE_URL}songs/Behom_Kolohom_Albumaty.Com.mp3`
+
+  },
+    {
+    "title": "Dayman Maaak",
+    "artist": "Ramy gamal",
+    "duration": "4:57",
+    "src": `${import.meta.env.BASE_URL}songs/04.Dayman_Maaak.mp3`
+
+  },
+    {
+    "title": "Zay El Shams",
+    "artist": "Ramy Gamal",
+    "duration": "4:29",
+    "src": `${import.meta.env.BASE_URL}songs/07.Zay_El-Shams.mp3`
+
+  },
+  {
+    "title": "Kol Sana W Enta 2lpi",
+    "artist": "El Essily",
+    "duration": "2:26",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_kl_snt_-_ealan_wady_dglt_llttwyr_alakary.mp3`
+
+  },
+  {
+    "title": "El shams",
+    "artist": "Mayada El Hennawy",
+    "duration": "9:31",
+    "src": `${import.meta.env.BASE_URL}songs/El_shams.mp3`
+
+  },
+  {
+    "title": "L3baly FDmaghy",
+    "artist": "tul8te",
+    "duration": "1:33",
+    "src": `${import.meta.env.BASE_URL}songs/Mahrgan.L3baly.F.Dmaghy-MaTb3aa.Com.mp3`
+
+  },
+    {
+    "title": "hsyny",
+    "artist": "Tul8te",
+    "duration": "3:33",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_tww_lyt_hsyny.mp3`
+
+  },
+    {
+    "title": "whhkylk hkawy",
+    "artist": "tul8te",
+    "duration": "2:21",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_tww_lyt_whhkylk_hkawy.mp3`
+
+  },
+    {
+    "title": "Dk alhwa dkh",
+    "artist": "Reda Albhrawi",
+    "duration": "4:34",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_rda_albhrawi_dk_alhwa_dkh.mp3`
+
+  },
+  {
+    "title": "Ana msh aayz ghyrk",
+    "artist": "Bahaa Sultan",
+    "duration": "3:27",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_bhaa_sltan_ana_msh_aayz_ghyrk_-_ealan_enrshya.mp3`
+
+  },
+  {
+    "title": "Baashak Rouhik",
+    "artist": "Marawan Khory",
+    "duration": "4:13",
+    "src": `${import.meta.env.BASE_URL}songs/Marawan.Khory_Baashak.Rouhik.mp3`
+
+  },
+    {
+    "title": "Asr El Shoa",
+    "artist": "Marawan Khory",
+    "duration": "3:47",
+    "src": `${import.meta.env.BASE_URL}songs/93fo364g.mp3`
+
+  },
+    {
+    "title": "Balahlam",
+    "artist": "Nasyf Zaytoun",
+    "duration": "2:46",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_nasyf_zytwn_balahlam.mp3`
+
+  },
+  {
+    "title": "ya_hlw",
+    "artist": "Adam",
+    "duration": "3:27",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_adm_ya_hlw.mp3`
+
+  },
+  {
+    "title": "Ayeshni Aktar",
+    "artist": "Gannat",
+    "duration": "4:47",
+    "src": `${import.meta.env.BASE_URL}songs/06-_Ayeshni_Aktar.mp3`
+
+  },
+    {
+    "title": "Bahibak",
+    "artist": "Ganat",
+    "duration": "4:07",
+    "src": `${import.meta.env.BASE_URL}songs/02.Bahibak.mp3`
+
+  },
+  {
+    "title": "Shou Mahssoudin",
+    "artist": "Saad Ramadan",
+    "duration": "3:20",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Saad.Ramadan.Shou.Mahssoudin.mp3`
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+,{
+    "title": "01_Banadeek_Taala",
+    "artist": "Unknown",
+    "duration": "3:15",
+    "src": `${import.meta.env.BASE_URL}songs/01_Banadeek_Taala.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_mdht_salh_da_hb",
+    "artist": "Unknown",
+    "duration": "2:58",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mdht_salh_da_hb.mp3`
+
+  },
+  {
+    "title": "_Koly_Melkak",
+    "artist": "11_",
+    "duration": "4:50",
+    "src": `${import.meta.env.BASE_URL}songs/11_-_Koly_Melkak.mp3`
+
+  },
+  {
+    "title": "_mn_fylm_alhwi_sltan",
+    "artist": "Albumaty.Com_bhaa_sltan_ana_mn_ghyrk_",
+    "duration": "3:41",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_bhaa_sltan_ana_mn_ghyrk_-_mn_fylm_alhwi_sltan.mp3`
+
+  },
+  {
+    "title": "10.Habeet",
+    "artist": "Unknown",
+    "duration": "4:19",
+    "src": `${import.meta.env.BASE_URL}songs/10.Habeet.mp3`
+
+  },
+  {
+    "title": "13._Bahebo",
+    "artist": "Unknown",
+    "duration": "3:55",
+    "src": `${import.meta.env.BASE_URL}songs/13._Bahebo.mp3`
+
+  },
+  {
+    "title": "13.Khalleeny_Ganbak",
+    "artist": "Unknown",
+    "duration": "5:17",
+    "src": `${import.meta.env.BASE_URL}songs/13.Khalleeny_Ganbak.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Mahmoud.El.Esseily.7elm.b3eed",
+    "artist": "Unknown",
+    "duration": "5:20",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Mahmoud.El.Esseily.7elm.b3eed.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Elissa.Kol_Youm_Fi_Omry",
+    "artist": "Unknown",
+    "duration": "5:23",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Kol_Youm_Fi_Omry.mp3`
+
+  },
+  {
+    "title": "07.Lama_El_Nasim",
+    "artist": "Unknown",
+    "duration": "5:39",
+    "src": `${import.meta.env.BASE_URL}songs/07.Lama_El_Nasim.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_Tamer_Ashour_Khalini (1)",
+    "artist": "Unknown",
+    "duration": "3:16",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Tamer_Ashour_Khalini (1).mp3`
+
+  },
+  {
+    "title": "Siilawy",
+    "artist": "3alshank",
+    "duration": "3:07",
+    "src": `${import.meta.env.BASE_URL}songs/3alshank-Siilawy-MaTb3aa.Com.mp3`
+
+  },
+  {
+    "title": "06.Ghaly_Nghmaty.Com",
+    "artist": "Unknown",
+    "duration": "5:01",
+    "src": `${import.meta.env.BASE_URL}songs/06.Ghaly_Nghmaty.Com.mp3`
+
+  },
+  {
+    "title": "MaTb3aa.Com",
+    "artist": "Mahrgan.Fe.Zenznty",
+    "duration": "3:45",
+    "src": `${import.meta.env.BASE_URL}songs/Mahrgan.Fe.Zenznty-MaTb3aa.Com.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Elissa.Chafouna_Tneyn",
+    "artist": "Unknown",
+    "duration": "4:23",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Chafouna_Tneyn.mp3`
+
+  },
+  {
+    "title": "04.Kelma",
+    "artist": "Unknown",
+    "duration": "4:08",
+    "src": `${import.meta.env.BASE_URL}songs/04.Kelma.mp3`
+
+  },
+  {
+    "title": "_Elrak_3l_Neia",
+    "artist": "06_",
+    "duration": "4:19",
+    "src": `${import.meta.env.BASE_URL}songs/06_-_Elrak_3l_Neia.mp3`
+
+  },
+  {
+    "title": "_mn_mslsl_kaml_aladd___",
+    "artist": "Albumaty.Com_mhmwd_alasyly_hbyby_wabn_hbyby_",
+    "duration": "3:16",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_hbyby_wabn_hbyby_-_mn_mslsl_kaml_aladd___.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_wail_gsar_wla_fy_alahlam",
+    "artist": "Unknown",
+    "duration": "4:23",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_wail_gsar_wla_fy_alahlam.mp3`
+
+  },
+  {
+    "title": "08.We_Fehemt_Einak (1)",
+    "artist": "Unknown",
+    "duration": "3:41",
+    "src": `${import.meta.env.BASE_URL}songs/08.We_Fehemt_Einak (1).mp3`
+
+  },
+  {
+    "title": "_Qesset_Hob",
+    "artist": "09_",
+    "duration": "3:33",
+    "src": `${import.meta.env.BASE_URL}songs/09_-_Qesset_Hob.mp3`
+
+  },
+  {
+    "title": "دندنها",
+    "artist": "نامي",
+    "duration": "5:52",
+    "src": `${import.meta.env.BASE_URL}songs/نامي - دندنها.mp3`
+
+  },
+
+  {
+    "title": "Albumaty.Com.Elissa.Betmoun",
+    "artist": "Unknown",
+    "duration": "4:05",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Betmoun.mp3`
+
+  },
+  {
+    "title": "03.At7ada El Aalam",
+    "artist": "Unknown",
+    "duration": "4:57",
+    "src": `${import.meta.env.BASE_URL}songs/03.At7ada El Aalam.mp3`
+
+  },
+  {
+    "title": "07.Tameny",
+    "artist": "Unknown",
+    "duration": "2:50",
+    "src": `${import.meta.env.BASE_URL}songs/07.Tameny.mp3`
+
+  },
+  {
+    "title": "11.Mayeswa",
+    "artist": "Unknown",
+    "duration": "3:24",
+    "src": `${import.meta.env.BASE_URL}songs/11.Mayeswa.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Elissa.Ajmal.Ihssas",
+    "artist": "Unknown",
+    "duration": "5:54",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Ajmal.Ihssas.mp3`
+
+  },
+  {
+    "title": "Behom_Kolohom_Albumaty.Com",
+    "artist": "Unknown",
+    "duration": "4:02",
+    "src": `${import.meta.env.BASE_URL}songs/Behom_Kolohom_Albumaty.Com.mp3`
+
+  },
+  {
+    "title": "لكل عاشق وطن خالد سليم",
+    "artist": "Unknown",
+    "duration": "3:20",
+    "src": `${import.meta.env.BASE_URL}songs/لكل عاشق وطن خالد سليم.mp3`
+
+  },
+  {
+    "title": "12._Mettamena",
+    "artist": "Unknown",
+    "duration": "4:54",
+    "src": `${import.meta.env.BASE_URL}songs/12._Mettamena.mp3`
+
+  },
+  {
+    "title": "Hassan.Alasmar",
+    "artist": "Aghla.Mn.3enaya",
+    "duration": "5:11",
+    "src": `${import.meta.env.BASE_URL}songs/Aghla.Mn.3enaya-Hassan.Alasmar-MaTb3aa.Com.mp3`
+
+  },
+  {
+    "title": "09_Youm_Matbelna",
+    "artist": "Unknown",
+    "duration": "3:25",
+    "src": `${import.meta.env.BASE_URL}songs/09_Youm_Matbelna.mp3`
+
+  },
+  {
+    "title": "Rada.Albahrawy",
+    "artist": "Ba3d.Elhanane",
+    "duration": "4:35",
+    "src": `${import.meta.env.BASE_URL}songs/Ba3d.Elhanane-Rada.Albahrawy-MaTb3aa.Com.mp3`
+
+  },
+  {
+    "title": "Malesh Ba3dak",
+    "artist": "Karim Mo7sen.ft.Tamer 7osne",
+    "duration": "3:39",
+    "src": `${import.meta.env.BASE_URL}songs/Karim Mo7sen.ft.Tamer 7osne - Malesh Ba3dak.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Amr.Diab.Ayesh.Ma3ak",
+    "artist": "Unknown",
+    "duration": "3:58",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Amr.Diab.Ayesh.Ma3ak.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_Elissa_Ayami_Biek",
+    "artist": "Unknown",
+    "duration": "4:40",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Elissa_Ayami_Biek.mp3`
+
+  },
+  {
+    "title": "07.Khabyni",
+    "artist": "Unknown",
+    "duration": "3:57",
+    "src": `${import.meta.env.BASE_URL}songs/07.Khabyni.mp3`
+
+  },
+  {
+    "title": "10.Khalek Be Alby",
+    "artist": "Unknown",
+    "duration": "5:10",
+    "src": `${import.meta.env.BASE_URL}songs/10.Khalek Be Alby.mp33`
+
+  },
+
+  {
+    "title": "Albumaty.Com_amrw_dyab_ma_tklksh",
+    "artist": "Unknown",
+    "duration": "4:14",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_ma_tklksh.mp3`
+
+  },
+  {
+    "title": "يا ملاك عامر منيب",
+    "artist": "Unknown",
+    "duration": "5:00",
+    "src": `${import.meta.env.BASE_URL}songs/يا ملاك عامر منيب.mp3`
+
+  },
+  {
+    "title": "AlShami",
+    "artist": "Maleket.Gamal.ElKon",
+    "duration": "2:50",
+    "src": `${import.meta.env.BASE_URL}songs/Maleket.Gamal.ElKon-AlShami-MaTb3aa.Com.mp3`
+
+  },
+  {
+    "title": "_Ewediny",
+    "artist": "01_",
     "duration": "5:43",
     "src": `${import.meta.env.BASE_URL}songs/01_-_Ewediny.mp3`
 
-    
-  },        {
-      "title": "Omry Maak",
-      "artist": "Angham",
-      "duration": "5:30",
-      "src": `${import.meta.env.BASE_URL}songs/01._Omry_Maak.mp3`
-    },
+  },
+  {
+    "title": "هقولك كلمه تامر حسني",
+    "artist": "Unknown",
+    "duration": "3:52",
+    "src": `${import.meta.env.BASE_URL}songs/هقولك كلمه تامر حسني.mp3`
 
+  },
+  {
+    "title": "09.Y5lek_Leya",
+    "artist": "Unknown",
+    "duration": "4:07",
+    "src": `${import.meta.env.BASE_URL}songs/09.Y5lek_Leya.mp3`
 
-  ];
+  },
+  {
+    "title": "12._Ahla_Haga_Feeky (1)",
+    "artist": "Unknown",
+    "duration": "3:41",
+    "src": `${import.meta.env.BASE_URL}songs/12._Ahla_Haga_Feeky (1).mp3`
+
+  },
+  {
+    "title": "10.Khalik_Maaaya",
+    "artist": "Unknown",
+    "duration": "3:54",
+    "src": `${import.meta.env.BASE_URL}songs/10.Khalik_Maaaya.mp3`
+
+  },
+  {
+    "title": "muneeb",
+    "artist": "ytmp3free.cc_amir",
+    "duration": "3:58",
+    "src": `${import.meta.env.BASE_URL}songs/ytmp3free.cc_amir-muneeb-leil-wnahar-youtubemp3free.org.mp3`
+
+  },
+  {
+    "title": "02.Aktar_Wahed",
+    "artist": "Unknown",
+    "duration": "4:31",
+    "src": `${import.meta.env.BASE_URL}songs/02.Aktar_Wahed.mp3`
+
+  },
+  {
+    "title": "04.Dayman_Maaak",
+    "artist": "Unknown",
+    "duration": "4:57",
+    "src": `${import.meta.env.BASE_URL}songs/04.Dayman_Maaak.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_alakhrs__skaba",
+    "artist": "Unknown",
+    "duration": "3:15",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_alakhrs__skaba.mp3`
+
+  },
+  {
+    "title": "06.Helwa_El_Ayam",
+    "artist": "Unknown",
+    "duration": "3:49",
+    "src": `${import.meta.env.BASE_URL}songs/06.Helwa_El_Ayam.mp3`
+
+  },
+  {
+    "title": "04.Haga_Mestakhabeya",
+    "artist": "Unknown",
+    "duration": "4:47",
+    "src": `${import.meta.env.BASE_URL}songs/04.Haga_Mestakhabeya.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_amrw_dyab_baba",
+    "artist": "Unknown",
+    "duration": "3:18",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_baba.mp3`
+
+  },
+  {
+    "title": "04.Allah_Ala_Hobak",
+    "artist": "Unknown",
+    "duration": "3:41",
+    "src": `${import.meta.env.BASE_URL}songs/04.Allah_Ala_Hobak.mp3`
+
+  },
+  {
+    "title": "_Esmy",
+    "artist": "04_",
+    "duration": "7:11",
+    "src": `${import.meta.env.BASE_URL}songs/04_-_Esmy.mp3`
+
+  },
+  {
+    "title": "01._Omry_Maak",
+    "artist": "Unknown",
+    "duration": "5:30",
+    "src": `${import.meta.env.BASE_URL}songs/01._Omry_Maak.mp3`
+
+  },
+  {
+    "title": "03_Andy_Suwal",
+    "artist": "Unknown",
+    "duration": "3:38",
+    "src": `${import.meta.env.BASE_URL}songs/03_Andy_Suwal.mp3`
+
+  },
+  {
+    "title": "_Maak_Alby",
+    "artist": "04_",
+    "duration": "3:18",
+    "src": `${import.meta.env.BASE_URL}songs/04_-_Maak_Alby.mp3`
+
+  },
+  {
+    "title": "13._Taali",
+    "artist": "Unknown",
+    "duration": "3:17",
+    "src": `${import.meta.env.BASE_URL}songs/13._Taali.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_Tamer_Ashour_Khalini",
+    "artist": "Unknown",
+    "duration": "3:16",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Tamer_Ashour_Khalini.mp3`
+
+  },
+  {
+    "title": "_Ma3_El_Ayam",
+    "artist": "10_",
+    "duration": "3:56",
+    "src": `${import.meta.env.BASE_URL}songs/10_-_Ma3_El_Ayam.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_mhmwd_alasyly_dlmt_dlmt",
+    "artist": "Unknown",
+    "duration": "3:38",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_dlmt_dlmt.mp3`
+
+  },
+  {
+    "title": "10.Aseebak_Laa",
+    "artist": "Unknown",
+    "duration": "3:38",
+    "src": `${import.meta.env.BASE_URL}songs/10.Aseebak_Laa.mp3`
+
+  },
+  {
+    "title": "_ma__lygy_sy",
+    "artist": "Albumaty.Com_zyad_zaza_wla_myn_",
+    "duration": "3:13",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_zyad_zaza_wla_myn_-_ma__lygy_sy.mp3`
+
+  },
+  {
+    "title": "01.Meen_Momken",
+    "artist": "Unknown",
+    "duration": "4:27",
+    "src": `${import.meta.env.BASE_URL}songs/01.Meen_Momken.mp3`
+
+  },
+  {
+    "title": "من اول يوم مصطفي قمر",
+    "artist": "Unknown",
+    "duration": "3:17",
+    "src": `${import.meta.env.BASE_URL}songs/من اول يوم مصطفي قمر.mp3`
+
+  },
+  {
+    "title": "12._Ahla_Haga_Feeky",
+    "artist": "Unknown",
+    "duration": "3:41",
+    "src": `${import.meta.env.BASE_URL}songs/12._Ahla_Haga_Feeky.mp3`
+
+  },
+  {
+    "title": "10_Aghla_Min_Omry",
+    "artist": "Unknown",
+    "duration": "4:46",
+    "src": `${import.meta.env.BASE_URL}songs/10_Aghla_Min_Omry.mp3`
+
+  },
+  {
+    "title": "08.We_Fehemt_Einak",
+    "artist": "Unknown",
+    "duration": "3:41",
+    "src": `${import.meta.env.BASE_URL}songs/08.We_Fehemt_Einak.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_abyr_namt_bsraht",
+    "artist": "Unknown",
+    "duration": "3:18",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_abyr_namt_bsraht.mp3`
+
+  },
+  {
+    "title": "a3ml",
+    "artist": "ytmp3free.cc_mohab",
+    "duration": "2:41",
+    "src": `${import.meta.env.BASE_URL}songs/ytmp3free.cc_mohab-a3ml-eh-official-audio-youtubemp3free.org.mp3`
+
+  },
+  {
+    "title": "_mn_mslsl_hgmt_mrtdt",
+    "artist": "Albumaty.Com_mdht_salh_kl_klam_alhb_",
+    "duration": "3:14",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mdht_salh_kl_klam_alhb_-_mn_mslsl_hgmt_mrtdt.mp3`
+
+  },
+  {
+    "title": "بحبك وبغار عاصي الحلاني",
+    "artist": "Unknown",
+    "duration": "5:55",
+    "src": `${import.meta.env.BASE_URL}songs/بحبك وبغار عاصي الحلاني.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_Mahmoud_El_Esseily_Ganna_Tekfeina",
+    "artist": "Unknown",
+    "duration": "4:16",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Mahmoud_El_Esseily_Ganna_Tekfeina.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Mahmoud.Elessily.Ya.Nas",
+    "artist": "Unknown",
+    "duration": "3:24",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Mahmoud.Elessily.Ya.Nas.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Amr.Diab.Yahob.Dwbna",
+    "artist": "Unknown",
+    "duration": "3:24",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Amr.Diab.Yahob.Dwbna.mp3`
+
+  },
+  {
+    "title": "06.Seta_El_Sobah",
+    "artist": "Unknown",
+    "duration": "4:26",
+    "src": `${import.meta.env.BASE_URL}songs/06.Seta_El_Sobah.mp3`
+
+  },
+  {
+    "title": "14._Odam_Merayetha",
+    "artist": "Unknown",
+    "duration": "3:42",
+    "src": `${import.meta.env.BASE_URL}songs/14._Odam_Merayetha.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_Amr_Diab_Ray2ah",
+    "artist": "Unknown",
+    "duration": "4:06",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Amr_Diab_Ray2ah.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com.Elissa.7ob.kol.7ayaty",
+    "artist": "Unknown",
+    "duration": "3:34",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.7ob.kol.7ayaty.mp3`
+
+  },
+  {
+    "title": "Albumaty.Com_ramy_sbri_kl_snt",
+    "artist": "Unknown",
+    "duration": "3:03",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_ramy_sbri_kl_snt.mp3`
+
+  }
+
+];
+
 
   const filteredSongs = songs.filter(song =>
     song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
