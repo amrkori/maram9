@@ -216,6 +216,12 @@ const MusicPlayer: React.FC = () => {
       "duration": "5:46",
       "src": `${import.meta.env.BASE_URL}songs/10_Ahla_Haga.mp3`
     },
+        {
+      "title": "Taali",
+      "artist": " Amr Diab",
+      "duration": "3:17",
+      "src":`${import.meta.env.BASE_URL}songs/13._Taali.mp3`
+    },
 
 
 
@@ -330,12 +336,7 @@ const MusicPlayer: React.FC = () => {
       "duration": "5:01",
       "src": `${import.meta.env.BASE_URL}songs/06.Ghaly_Nghmaty.Com.mp3`
     },
-    {
-      "title": "Taali",
-      "artist": "Ramy Sabry",
-      "duration": "3:17",
-      "src":`${import.meta.env.BASE_URL}songs/13._Taali.mp3`
-    },
+
     {
       "title": "Ma3 El Ayam",
       "artist": "Ramy Sabry",
@@ -614,12 +615,7 @@ const MusicPlayer: React.FC = () => {
       "duration": "5:55",
       "src": `${import.meta.env.BASE_URL}songs/بحبك وبغار عاصي الحلاني.mp3`
     },
-  {
-    "title": "Ana 7ebet",
-    "artist": "Khaled Selim",
-    "duration": "4:46",
-    "src": `${import.meta.env.BASE_URL}songs/انا حبيت خالد سليم.mp3`
-  },
+  
     {
       "title": "Khabyni",
       "artist": "Mohamed Fouad",
@@ -649,7 +645,7 @@ const MusicPlayer: React.FC = () => {
     "title": "Shedni Ghmorni",
     "artist": "Adham Nabulsi",
     "duration": "4:28",
-    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Adham.Nabulsi.Shedni.Ghmorni.mp3`
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Adham.Nabulsi.Shedni.Ghmorni (1).mp3`
   },
       {
       "title": "Wla Fy Alahlam",
@@ -759,6 +755,12 @@ const MusicPlayer: React.FC = () => {
       "duration": "3:20",
       "src": `${import.meta.env.BASE_URL}songs/لكل عاشق وطن خالد سليم.mp3`
     },
+    {
+    "title": "Ana 7ebet",
+    "artist": "Khaled Selim",
+    "duration": "4:46",
+    "src": `${import.meta.env.BASE_URL}songs/63zb502N.mp3`
+  },
     {
       "title": "Men Awel Youm",
       "artist": "Mostafa Kamar",
