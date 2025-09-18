@@ -37,7 +37,7 @@ const MusicPlayer: React.FC = () => {
     "title": "We Maloh",
     "artist": "Amr Diab",
     "duration": "4:48",
-    "src": `${import.meta.env.BASE_URL}songs/02.We Maloh.mp3`
+    "src": `${import.meta.env.BASE_URL}songs/02.We_Maloh.mp3`
   },
   {
     "title": "Khalina Lewahdina",
