@@ -9,10 +9,17 @@ const Quotes: React.FC = () => {
   const quotes = [
     "I love you not only for what you are, but for what I am when I am with you.",
     "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.",
-    "You don't love someone for their looks, or their clothes, or for their fancy car, but because they sing a song only you can hear.",
+    "Rich in life because i have you",
+    "As long as i exist, you will always be loved",
+    "As long as i exist, you will never be alone",
     "The best thing to hold onto in life is each other.",
     "You are my today and all of my tomorrows.",
-    "I choose you. And I'll choose you over and over and over. Without pause, without a doubt, in a heartbeat. I'll keep choosing you."
+    "I didn't feel my life except with you",
+    "I was lucky enough to meet you",
+    "I see my future in your eyes",
+    "I choose you. And I'll choose you over and over and over. Without pause, without a doubt, in a heartbeat. I'll keep choosing you.",
+    "Not all angels have wings, You has stunning eyes and a beautiful smilee."
+
   ];
 
   useEffect(() => {

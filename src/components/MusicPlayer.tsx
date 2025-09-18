@@ -12,22 +12,57 @@ const MusicPlayer: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
-const songs = [
-
-
-
+  const songs = [
+    
+    
+    {
+      "title": "Sadakny Khalas",
+      "artist": "Amr Diab",
+      "duration": "3:51",
+      "src": `${import.meta.env.BASE_URL}songs/08.Sadakny_Khalas.mp3`
+    },
+    {
+      "title": "Habibty Mlak",
+      "artist": "Amr Diab",
+      "duration": "4:15",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_hbیbty_mlak.mp3`
+    },
+    {
+      "title": "Aghla Min Omry",
+      "artist": "Amr Diab",
+      "duration": "4:46",
+      "src": `${import.meta.env.BASE_URL}songs/10_Aghla_Min_Omry.mp3`
+    },
+        {
+    "title": "We Maloh",
+    "artist": "Amr Diab",
+    "duration": "4:48",
+    "src": `${import.meta.env.BASE_URL}songs/02.We Maloh.mp3`
+  },
+  {
+    "title": "Khalina Lewahdina",
+    "artist": "Amr Diab",
+    "duration": "5:19",
+    "src": `${import.meta.env.BASE_URL}songs/07_Khalina_Lewahdina.mp3`
+  },
+  {
+    "title": "Tamally Maak",
+    "artist": "Amr Diab",
+    "duration": "4:31",
+    "src": `${import.meta.env.BASE_URL}songs/02.Tamally_Maak.mp3`
+  },
+  {
+    "title": "Ray2ah",
+    "artist": "Amr Diab",
+    "duration": "4:06",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Amr_Diab_Ray2ah.mp3`
+  },
     {
       "title": "Lama 2abeltak",
       "artist": "Amr Diab",
       "duration": "3:52",
-    "src": `${import.meta.env.BASE_URL}songs/Nghmat.Com_Amr.Diab_lama.2abeltak.mp3`
-
-    },
-    {
-      "title": "Ray2ah",
-      "artist": "Amr Diab",
-      "duration": "4:06",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Amr_Diab_Ray2ah.mp3`
+      "src": `${import.meta.env.BASE_URL}songs/Nghmat.Com_Amr.Diab_lama.2abeltak.mp3`
+      
     },
     {
       "title": "Abtdyna",
@@ -47,12 +82,7 @@ const songs = [
       "duration": "4:02",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_btmn_alyk.mp3`
     },
-    {
-      "title": "Habibty Mlak",
-      "artist": "Amr Diab",
-      "duration": "4:15",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_hbیbty_mlak.mp3`
-    },
+
     {
       "title": "Khtfwny",
       "artist": "Amr Diab",
@@ -66,12 +96,7 @@ const songs = [
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_ma_tklksh.mp3`
     },
     
-    {
-    "title": "We Maloh",
-    "artist": "Amr Diab",
-    "duration": "4:48",
-    "src": `${import.meta.env.BASE_URL}songs/02.We Maloh.mp3`
-  },
+
   {
     "title": "Banadeek Taala",
     "artist": "Amr Diab",
@@ -116,18 +141,7 @@ const songs = [
     "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_amrw_dyab_shkra_mn_hna_lbkra___aalan_fwdafwn___rmdan_2023.mp3`
   },
 
-  {
-    "title": "Aghla Min Omry",
-    "artist": "Amr Diab",
-    "duration": "4:46",
-    "src": `${import.meta.env.BASE_URL}songs/10_Aghla_Min_Omry.mp3`
-  },
-  {
-    "title": "Ray2ah",
-    "artist": "Amr Diab",
-    "duration": "4:06",
-    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Amr_Diab_Ray2ah.mp3`
-  },
+  
   {
     "title": "Bahebo",
     "artist": "Amr Diab",
@@ -139,12 +153,6 @@ const songs = [
       "artist": "Amr Diab",
       "duration": "4:31",
       "src": `${import.meta.env.BASE_URL}songs/02.Aktar_Wahed.mp3`
-    },
-    {
-      "title": "Tamally Maak",
-      "artist": "Amr Diab",
-      "duration": "4:31",
-      "src": `${import.meta.env.BASE_URL}songs/02.Tamally_Maak.mp3`
     },
 
 
@@ -173,28 +181,16 @@ const songs = [
       "src": `${import.meta.env.BASE_URL}songs/07.Tameny.mp3`
     },
     {
-      "title": "Khalina Lewahdina",
-      "artist": "Amr Diab",
-      "duration": "5:19",
-      "src": `${import.meta.env.BASE_URL}songs/07_Khalina_Lewahdina.mp3`
-    },
-    {
       "title": "Allemny Hawak",
       "artist": "Amr Diab",
       "duration": "3:20",
       "src": `${import.meta.env.BASE_URL}songs/08.Allemny_Hawak.mp3`
     },
     {
-      "title": "Sadakny Khalas",
-      "artist": "Amr Diab",
-      "duration": "3:51",
-      "src": `${import.meta.env.BASE_URL}songs/08.Sadakny_Khalas.mp3`
-    },
-    {
       "title": "We Fehemt Einak",
       "artist": "Amr Diab",
       "duration": "3:41",
-      "src": `${import.meta.env.BASE_URL}songs/08.We_Fehemt_Einak.mp3/`
+      "src": `${import.meta.env.BASE_URL}songs/08.We_Fehemt_Einak.mp3`
     },
     {
       "title": "Helwa El Ayam",
@@ -215,6 +211,37 @@ const songs = [
       "src": `${import.meta.env.BASE_URL}songs/09_Youm_Matbelna.mp3`
     },
         {
+      "title": "Ya Ahla Haga",
+      "artist": "Amr Diab",
+      "duration": "5:46",
+      "src": `${import.meta.env.BASE_URL}songs/10_Ahla_Haga.mp3`
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "title": "Ehsas Ghareb",
+      "artist": "Ur Favourite Film",
+      "duration": "3:16",
+      "src": `${import.meta.env.BASE_URL}songs/828B26xq.mp3`
+    },
+        {
       "title": "Elly Msbrny",
       "artist": "Ur Favourite Film",
       "duration": "3:26",
@@ -226,6 +253,24 @@ const songs = [
       "duration": "3:37",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Ahmed.Fahmy.Handoos.mp3`
     },
+        {
+      "title": "Ghabt Shamsna",
+      "artist": "Ur Favourite Film",
+      "duration": "4:43",
+      "src": `${import.meta.env.BASE_URL}songs/40Z884Iu.mp3`
+    },
+
+
+
+
+
+
+  {
+    "title": "Mn Alby Baghany",
+    "artist": "Hamaki",
+    "duration": "4:43",
+    "src": `${import.meta.env.BASE_URL}songs/12.Mn_Alby_Baghany.mp3`
+  },
   {
     "title": "Ewediny",
     "artist": "Hamaki",
@@ -244,6 +289,17 @@ const songs = [
       "duration": "3:41",
       "src": `${import.meta.env.BASE_URL}songs/12._Ahla_Haga_Feeky.mp3`
     },
+
+
+
+
+
+
+
+
+
+
+
     {
       "title": "Y5lek Leya",
       "artist": "Ramy Gamal",
@@ -256,6 +312,24 @@ const songs = [
       "duration": "4:02",
       "src": `${import.meta.env.BASE_URL}songs/Behom_Kolohom_Albumaty.Com.mp3`
   },
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+      "title": "Ghaly",
+      "artist": "Ramy Sabry",
+      "duration": "5:01",
+      "src": `${import.meta.env.BASE_URL}songs/06.Ghaly_Nghmaty.Com.mp3`
+    },
     {
       "title": "Taali",
       "artist": "Ramy Sabry",
@@ -280,160 +354,42 @@ const songs = [
       "duration": "3:03",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_ramy_sbri_kl_snt.mp3`
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {
       "title": "Khalini",
       "artist": "Tamer Ashour",
       "duration": "3:16",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Tamer_Ashour_Khalini.mp3`
     },
-    
+      {
+    "title": "Men Gherak",
+    "artist": "Tamer Ashour",
+    "duration": "4:20",
+    "src": `${import.meta.env.BASE_URL}songs/10_-_Men_Gherak.mp3`
+
+  },
     {
       "title": "Elrak 3l Neia",
       "artist": "Tamer Ashour",
       "duration": "4:19",
       "src": `${import.meta.env.BASE_URL}songs/06_-_Elrak_3l_Neia.mp3`
     },
-    {
-      "title": "7ob kol 7ayaty",
-      "artist": "Elissa",
-      "duration": "3:34",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.7ob.kol.7ayaty.mp3`
-    },
-    {
-      "title": "Ajmal Ihssas",
-      "artist": "Elissa",
-      "duration": "5:54",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Ajmal.Ihssas.mp3`
-    },
-    {
-      "title": "Ayshalak",
-      "artist": "Elissa",
-      "duration": "4:38",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Ayshalak.mp3`
-    },
-    {
-      "title": "Betmoun",
-      "artist": "Elissa",
-      "duration": "4:05",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Betmoun.mp3`
-    },
-    {
-      "title": "Chafouna_Tneyn",
-      "artist": "Elissa",
-      "duration": "4:23",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Chafouna_Tneyn.mp3`
-    },
-    {
-      "title": "Kol_Youm_Fi_Omry",
-      "artist": "Elissa",
-      "duration": "5:23",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Kol_Youm_Fi_Omry.mp3`
-    },
-        {
-      "title": "Ayami Biek",
-      "artist": "Elissa",
-      "duration": "4:40",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Elissa_Ayami_Biek.mp3`
-    },
-        {
-      "title": "Lessa Fiha Kalam",
-      "artist": "Elissa",
-      "duration": "4:50",
-      "src": `${import.meta.env.BASE_URL}songs/06._Lessa_Fiha_Kalam.mp3`
-    },
-        {
-      "title": "7ob kol 7ayaty",
-      "artist": "Elissa",
-      "duration": "3:34",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.7ob.kol.7ayaty.mp3`
-    },
-    {
-      "title": "foowk",
-      "artist": "Asala",
-      "duration": "3:08",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_asalt_fwk.mp3`
-    },
-    {
-      "title": "60 De2e2a Hayah",
-      "artist": "Asala",
-      "duration": "5:55",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Asala.60_De2e2a_Hayah.mp3`
-    },
-    
-    {
-      "title": "Asl hyaty",
-      "artist": "Sherine",
-      "duration": "4:54",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_shyryn_asl_hyaty.mp3`
-    },
-        {
-      "title": "Tariqy",
-      "artist": "Sherine",
-      "duration": "4:26",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Sherin.Tariqy.mp3`
-    },
-    {
-      "title": "Ya Layali",
-      "artist": "Sherine",
-      "duration": "5:00",
-      "src": `${import.meta.env.BASE_URL}songs/04_-_Ya_Layali.mp3`
-    },
-        {
-      "title": "Koly Melkak",
-      "artist": "Sherine",
-      "duration": "4:50",
-      "src": `${import.meta.env.BASE_URL}songs/11_-_Koly_Melkak.mp3`
-    },
-        {
-      "title": "Kalam Eneih",
-      "artist": "Sherine",
-      "duration": "3:55",
-      "src": `${import.meta.env.BASE_URL}songs/07._Kalam_Eneih.mp3`
-    },
-        {
-      "title": "Habeet",
-      "artist": "Sherine",
-      "duration": "4:19",
-      "src": `${import.meta.env.BASE_URL}songs/10.Habeet.mp3`
-    },
-        {
-      "title": "Omry Maak",
-      "artist": "Angham",
-      "duration": "5:30",
-      "src": `${import.meta.env.BASE_URL}songs/01._Omry_Maak.mp3`
-    },
-    {
-      "title": "Ana Aysha Hala",
-      "artist": "Angham",
-      "duration": "4:28",
-      "src": `${import.meta.env.BASE_URL}songs/03.Ana.Aysha.Hala.mp3`
-    },
-    
-    {
-      "title": "Mettamena",
-      "artist": "Angham",
-      "duration": "4:54",
-      "src": `${import.meta.env.BASE_URL}songs/12._Mettamena.mp3`
-    },
-        {
-      "title": "Ayeshni Aktar",
-      "artist": "Gannat",
-      "duration": "4:47",
-      "src": `${import.meta.env.BASE_URL}songs/06-_Ayeshni_Aktar.mp3`
-    },
-    {
-      "title": "Bahibak",
-      "artist": "Ganat",
-      "duration": "4:07",
-      "src": `${import.meta.env.BASE_URL}songs/02.Bahibak.mp3`
-    },
-        {
-      "title": "Shams",
-      "artist": "Mayada El Hennawy",
-      "duration": "4:29",
-      "src": `${import.meta.env.BASE_URL}songs/07.Zay_El-Shams.mp3`
-    },
-    {
+
+{
       "title": "Ana Mn Gherak",
       "artist": "Bahaa Sultan",
       "duration": "3:41",
@@ -460,12 +416,6 @@ const songs = [
     {
       "title": "Kol Sana W Ana Lazek Feek",
       "artist": "El Esseily",
-      "duration": "3:16",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_hbyby_wabn_hbyby_-_mn_mslsl_kaml_aladd___.mp3`
-    },
-    {
-      "title": "_ealan_wady_dglt_llttwyr_alakary",
-      "artist": "El Esseily",
       "duration": "2:26",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_kl_snt_-_ealan_wady_dglt_llttwyr_alakary.mp3`
     },
@@ -485,7 +435,8 @@ const songs = [
     "title": "Hbyby want gmby",
     "artist": "El Esseily",
     "duration": "3:42",
-    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_hbyby_want_gmby.mp3`
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_mhmwd_alasyly_hbyby_want_gmby (1).mp3`
+    
   },
       {
       "title": "Ha2olak Kelma",
@@ -526,12 +477,45 @@ const songs = [
       "duration": "4:39",
       "src": `${import.meta.env.BASE_URL}songs/06.Bagheer_Aleeha (1).mp3`
     },
-          {
-    "title": "Dayman Maaak",
-    "artist": "Tamer Hosny",
-    "duration": "4:57",
-    "src": `${import.meta.env.BASE_URL}songs/04.Dayman_Maaak.mp3`
-  },
+    {
+  title: "Enta Ekhtyar -  Bahebk",
+  artist: "Tamer Hosny",
+  duration: "4:06",
+  src: `${import.meta.env.BASE_URL}songs/Enta.Ekhtyar-Tamer.Hosny-MaTb3aa.Com.mp3`
+},
+{
+  title: "Habitha Ya Nas -  Bahebk",
+  artist: "Tamer Hosny",
+  duration: "2:34",
+  src: `${import.meta.env.BASE_URL}songs/Habitha.YaNas-Tamer.Hosny-MaTb3aa.Com.mp3`
+},
+{
+  title: "Hadal3ny -  Bahebk",
+  artist: "Tamer Hosny",
+  duration: "3:28",
+  src: `${import.meta.env.BASE_URL}songs/Hadal3ny-Tamer.Hosny-MaTb3aa.Com.mp3`
+},
+{
+  title: "Hatgawzek -  Bahebk",
+  artist: "Tamer Hosny",
+  duration: "3:05",
+  src: `${import.meta.env.BASE_URL}songs/Hatgawzek-Tamer.Hosny-MaTb3aa.Com.mp3`
+},
+{
+  title: "Haytna -  Bahebk",
+  artist: "Tamer Hosny",
+  duration: "4:51",
+  src: `${import.meta.env.BASE_URL}songs/Haytna-Tamer.Hosny-MaTb3aa.Com.mp3`
+},
+{
+  title: "Wa Enta B3eed -  Bahebk",
+  artist: "Tamer Hosny",
+  duration: "3:41",
+  src: `${import.meta.env.BASE_URL}songs/Wa.enta.b3eed-Tamer.Hosny-MaTb3aa.Com.mp3`
+},
+
+    
+
         {
       "title": "Malesh Ba3dak",
       "artist": "Karim Mo7sen",
@@ -581,12 +565,24 @@ const songs = [
       "duration": "4:34",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_rda_albhrawi_dk_alhwa_dkh.mp3`
     },
-        {
+      {
       "title": "Fe Zenznty",
       "artist": "Essam SaSa",
       "duration": "3:45",
       "src": `${import.meta.env.BASE_URL}songs/Mahrgan.Fe.Zenznty-MaTb3aa.Com.mp3`
     },
+  {
+    "title": "Samoray",
+    "artist": "Cairoke",
+    "duration": "2:55",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_kayrwky_samwray.mp3`
+  },
+    {
+    "title": "Fstank Alabyd",
+    "artist": "Hussien Al Jassmi",
+    "duration": "4:52",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_hsyn_algsmy_fstank_alabyd.mp3`
+  },
     {
       "title": "Seta El Sobah",
       "artist": "Hussien Al Jassmi",
@@ -600,7 +596,7 @@ const songs = [
       "src": `${import.meta.env.BASE_URL}songs/11.Mayeswa.mp3`
     },
         {
-      "title": "Ana Walkmr",
+      "title": "Ana Wel Amar",
       "artist": "Hussein Al Jasmi",
       "duration": "4:33",
       "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_hsyn_algsmy_ana_walkmr.mp3`
@@ -694,30 +690,12 @@ const songs = [
       "duration": "5:11",
       "src": `${import.meta.env.BASE_URL}songs/Aghla.Mn.3enaya-Hassan.Alasmar-MaTb3aa.Com.mp3`
     },
-
-
-    {
-      "title": "7lwa ya balady",
-      "artist": "Dalida",
-      "duration": "3:34",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Dalida.7lwa.ya.balady.mp3`
-    },
-
-    {
+        {
       "title": "Shou Mahssoudin",
       "artist": "Saad Ramadan",
       "duration": "3:20",
       "src":`${import.meta.env.BASE_URL}songs/Albumaty.Com.Saad.Ramadan.Shou.Mahssoudin.mp3`
     },
-
-
-
-
-
-
-
-
-
     {
       "title": "ya hlw",
       "artist": "Adam",
@@ -732,13 +710,6 @@ const songs = [
     },
 
     {
-      "title": "Ya Lyaly",
-      "artist": "Latifa",
-      "duration": "4:20",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_ltyft_ya_lyaly.mp3`
-    },
-
-    {
       "title": "Da Hob",
       "artist": "Medhat Saleh",
       "duration": "2:58",
@@ -750,7 +721,6 @@ const songs = [
       "duration": "3:14",
       "src":`${import.meta.env.BASE_URL}songs/Albumaty.Com_mdht_salh_kl_klam_alhb_-_mn_mslsl_hgmt_mrtdt.mp3`
     },
-    
     {
       "title": "Balahlam",
       "artist": "Nassef Zeytoun",
@@ -763,7 +733,6 @@ const songs = [
       "duration": "3:33",
       "src": `${import.meta.env.BASE_URL}songs/09_-_Qesset_Hob.mp3`
     },
-
     {
       "title": "At7ada El Aalam",
       "artist": "Saber Al Roba3y",
@@ -784,7 +753,6 @@ const songs = [
       "src": `${import.meta.env.BASE_URL}songs/ytmp3free.cc_amir-muneeb-leil-wnahar-youtubemp3free.org.mp3`
     },
 
-
     {
       "title": "Lakol 3asheq Watan",
       "artist": "Khaled Selim",
@@ -804,349 +772,470 @@ const songs = [
       "src":`${import.meta.env.BASE_URL}songs/نامي - دندنها.mp3`
     },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
-      "title": "Ahla Haga",
-      "artist": "Unknown",
-      "duration": "5:46",
-      "src": `${import.meta.env.BASE_URL}songs/10_Ahla_Haga.mp3`
+      "title": "Qasr El shoq",
+      "artist": "Marwan Khory",
+      "duration": "3:47",
+      "src": `${import.meta.env.BASE_URL}songs/93fo364g.mp3`
+    },
+  {
+    "title": "Bahebek Leh",
+    "artist": "Moustafa Elshoaiby",
+    "duration": "4:00",
+    "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Moustafa.Elshoaiby.Bahebek.Leh.mp3`
+  },
+
+
+
+
+
+
+  {
+    "title": "Maliket El Ehsas",
+    "artist": "Elissa",
+    "duration": "4:43",
+    "src": `${import.meta.env.BASE_URL}songs/04._Maliket_El_Ehsas.mp3`
+
+  },
+    {
+      "title": "7ob kol 7ayaty",
+      "artist": "Elissa",
+      "duration": "3:34",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.7ob.kol.7ayaty.mp3`
+    },
+    {
+      "title": "Ajmal Ihssas",
+      "artist": "Elissa",
+      "duration": "5:54",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Ajmal.Ihssas.mp3`
+    },
+    {
+      "title": "Ayshalak",
+      "artist": "Elissa",
+      "duration": "4:38",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Ayshalak.mp3`
+    },
+    {
+      "title": "Betmoun",
+      "artist": "Elissa",
+      "duration": "4:05",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Betmoun.mp3`
+    },
+    {
+      "title": "Chafouna Tneyn",
+      "artist": "Elissa",
+      "duration": "4:23",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Chafouna_Tneyn.mp3`
     },
         {
-      "title": "abyr_namt_bsraht",
-      "artist": "Unknown",
-      "duration": "3:18",
-      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_abyr_namt_bsraht.mp3`
-    },
-    {
-      "title": "Ghaly Nghmaty",
-      "artist": "Unknown",
-      "duration": "5:01",
-      "src": `${import.meta.env.BASE_URL}songs/06.Ghaly_Nghmaty.Com.mp3`
-    },
-    {
-      "title": "40Z884Iu",
-      "artist": "Unknown",
-      "duration": "4:43",
-      "src": `${import.meta.env.BASE_URL}songs/40Z884Iu.mp3`
-    },
-    {
-      "title": "65lJ53jH (1)",
-      "artist": "Unknown",
-      "duration": "4:34",
-      "src": `${import.meta.env.BASE_URL}songs/65lJ53jH (1).mp3`
-    },
-    {
-      "title": "65lJ53jH",
-      "artist": "Unknown",
+      "title": "Asad Wahda",
+      "artist": "Elissa",
       "duration": "4:34",
       "src": `${import.meta.env.BASE_URL}songs/65lJ53jH.mp3`
     },
     {
-      "title": "93fo364g",
-      "artist": "Unknown",
-      "duration": "3:47",
-      "src": `${import.meta.env.BASE_URL}songs/93fo364g.mp3`
+      "title": "Kol Youm Fi Omry",
+      "artist": "Elissa",
+      "duration": "5:23",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Elissa.Kol_Youm_Fi_Omry.mp3`
+    },
+        {
+      "title": "Ayami Biek",
+      "artist": "Elissa",
+      "duration": "4:40",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_Elissa_Ayami_Biek.mp3`
+    },
+        {
+      "title": "Lessa Fiha Kalam",
+      "artist": "Elissa",
+      "duration": "4:50",
+      "src": `${import.meta.env.BASE_URL}songs/06._Lessa_Fiha_Kalam.mp3`
     },
     {
-      "title": "828B26xq",
-      "artist": "Unknown",
-      "duration": "3:16",
-      "src": `${import.meta.env.BASE_URL}songs/828B26xq.mp3`
-    }
+      "title": "foowk",
+      "artist": "Asala",
+      "duration": "3:08",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_asalt_fwk.mp3`
+    },
+    {
+      "title": "60 De2e2a Hayah",
+      "artist": "Asala",
+      "duration": "5:55",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Asala.60_De2e2a_Hayah.mp3`
+    },
+    
+    {
+      "title": "Asl hyaty",
+      "artist": "Sherine",
+      "duration": "4:54",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_shyryn_asl_hyaty.mp3`
+    },
+        {
+      "title": "Tariqy",
+      "artist": "Sherine",
+      "duration": "4:26",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Sherin.Tariqy.mp3`
+    },
+    {
+      "title": "Ya Layali",
+      "artist": "Sherine",
+      "duration": "5:00",
+      "src": `${import.meta.env.BASE_URL}songs/04_-_Ya_Layali.mp3`
+    },
+        {
+      "title": "Koly Melkak",
+      "artist": "Sherine",
+      "duration": "4:50",
+      "src": `${import.meta.env.BASE_URL}songs/11_-_Koly_Melkak.mp3`
+    },
+        {
+      "title": "Kalam Eneih",
+      "artist": "Sherine",
+      "duration": "3:55",
+      "src": `${import.meta.env.BASE_URL}songs/07._Kalam_Eneih.mp3`
+    },
+        {
+      "title": "Habeet",
+      "artist": "Sherine",
+      "duration": "4:19",
+      "src": `${import.meta.env.BASE_URL}songs/10.Habeet.mp3`
+    },
+      {
+    "title": "Bekilma Minak",
+    "artist": "Sherine",
+    "duration": "4:17",
+    "src": `${import.meta.env.BASE_URL}songs/02.Bekilma_Minak.mp3`
+  },
+        {
+      "title": "Omry Maak",
+      "artist": "Angham",
+      "duration": "5:30",
+      "src": `${import.meta.env.BASE_URL}songs/01._Omry_Maak.mp3`
+    },
+    {
+      "title": "Ana Aysha Hala",
+      "artist": "Angham",
+      "duration": "4:28",
+      "src": `${import.meta.env.BASE_URL}songs/03.Ana.Aysha.Hala.mp3`
+    },
+    
+    {
+      "title": "Mettamena",
+      "artist": "Angham",
+      "duration": "4:54",
+      "src": `${import.meta.env.BASE_URL}songs/12._Mettamena.mp3`
+    },
+        {
+      "title": "Ayeshni Aktar",
+      "artist": "Gannat",
+      "duration": "4:47",
+      "src": `${import.meta.env.BASE_URL}songs/06-_Ayeshni_Aktar.mp3`
+    },
+    {
+      "title": "Bahibak",
+      "artist": "Ganat",
+      "duration": "4:07",
+      "src": `${import.meta.env.BASE_URL}songs/02.Bahibak.mp3`
+    },
+        {
+      "title": "Shams",
+      "artist": "Mayada El Hennawy",
+      "duration": "4:29",
+      "src": `${import.meta.env.BASE_URL}songs/07.Zay_El-Shams.mp3`
+    },
 
+    {
+      "title": "7lwa ya balady",
+      "artist": "Dalida",
+      "duration": "3:34",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com.Dalida.7lwa.ya.balady.mp3`
+    },
+      {
+    "title": "Ma Trohsh B3ed",
+    "artist": "Latifa",
+    "duration": "4:29",
+      "src": `${import.meta.env.BASE_URL}songs/01_-_Ma_Trohsh_B3ed.mp3`
+  },
+    {
+      "title": "Bsraha",
+      "artist": "Abeer Ne3ma",
+      "duration": "3:18",
+      "src": `${import.meta.env.BASE_URL}songs/Albumaty.Com_abyr_namt_bsraht.mp3`
+    },
   ];
 
 
+const filteredSongs = songs.filter(song =>
+  song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  song.artist.toLowerCase().includes(searchTerm.toLowerCase())
+);
 
-  const filteredSongs = songs.filter(song =>
-    song.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    song.artist.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+const formatTime = (time: number) => {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+};
 
-  const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  };
-
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(e => console.log('Audio play failed:', e));
-      }
-      setIsPlaying(!isPlaying);
+const togglePlay = () => {
+  if (audioRef.current) {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(e => console.log('Audio play failed:', e));
     }
-  };
+    setIsPlaying(!isPlaying);
+  }
+};
 
-  const selectSong = (index: number) => {
-    const actualIndex = songs.findIndex(song => song === filteredSongs[index]);
-    setCurrentSong(actualIndex);
+const selectSong = (index: number) => {
+  const actualIndex = songs.findIndex(song => song === filteredSongs[index]);
+  setCurrentSong(actualIndex);
+  setIsPlaying(true); // نحدّد إن الأغنية دلوقتي شغّالة
+};
+
+const nextSong = () => {
+  const nextIndex = isShuffled 
+    ? Math.floor(Math.random() * songs.length)
+    : (currentSong + 1) % songs.length;
+  setCurrentSong(nextIndex);
+  setIsPlaying(true);
+};
+
+const prevSong = () => {
+  const prevIndex = isShuffled 
+    ? Math.floor(Math.random() * songs.length)
+    : (currentSong - 1 + songs.length) % songs.length;
+  setCurrentSong(prevIndex);
+  setIsPlaying(true);
+};
+
+const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const newVolume = parseFloat(e.target.value);
+  setVolume(newVolume);
+  if (audioRef.current) {
+    audioRef.current.volume = newVolume;
+  }
+};
+
+const handleProgressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const newTime = parseFloat(e.target.value);
+  setCurrentTime(newTime);
+  if (audioRef.current) {
+    audioRef.current.currentTime = newTime;
+  }
+};
+
+// useEffect لمزامنة الصوت مع currentSong و isPlaying
+useEffect(() => {
+  const audio = audioRef.current;
+  if (!audio) return;
+
+  audio.src = songs[currentSong]?.src || '';
+  audio.load();
+
+  if (isPlaying) {
+    audio.play().catch(e => console.log('Audio play failed:', e));
+  } else {
+    audio.pause();
+  }
+
+  const updateTime = () => setCurrentTime(audio.currentTime);
+  const updateDuration = () => setDuration(audio.duration);
+  const handleEnded = () => {
     setIsPlaying(false);
-    if (audioRef.current) {
-      audioRef.current.src = songs[actualIndex].src;
-      audioRef.current.load();
-    }
+    nextSong();
   };
 
-  const nextSong = () => {
-    const nextIndex = isShuffled 
-      ? Math.floor(Math.random() * songs.length)
-      : (currentSong + 1) % songs.length;
-    setCurrentSong(nextIndex);
-    setIsPlaying(false);
-    if (audioRef.current) {
-      audioRef.current.src = songs[nextIndex].src;
-      audioRef.current.load();
-    }
+  audio.addEventListener('timeupdate', updateTime);
+  audio.addEventListener('loadedmetadata', updateDuration);
+  audio.addEventListener('ended', handleEnded);
+  audio.volume = volume;
+
+  return () => {
+    audio.removeEventListener('timeupdate', updateTime);
+    audio.removeEventListener('loadedmetadata', updateDuration);
+    audio.removeEventListener('ended', handleEnded);
   };
+}, [currentSong, isPlaying, volume]);
 
-  const prevSong = () => {
-    const prevIndex = isShuffled 
-      ? Math.floor(Math.random() * songs.length)
-      : (currentSong - 1 + songs.length) % songs.length;
-    setCurrentSong(prevIndex);
-    setIsPlaying(false);
-    if (audioRef.current) {
-      audioRef.current.src = songs[prevIndex].src;
-      audioRef.current.load();
-    }
-  };
+return (
+  <section id="playlist" className="py-20">
+    <div className={`transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} ref={ref}>
+      <h2 className="text-4xl font-dancing text-center text-pink-400 mb-12 relative">
+        Our Playlist
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-pink-400 to-teal-400 rounded-full"></div>
+      </h2>
+      
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
+          <p className="text-center text-white/80 mb-8 text-lg">Songs that tell our story</p>
+          
+          {/* Search Bar */}
+          <div className="relative mb-6">
+            <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60" />
+            <input
+              type="text"
+              placeholder="Search songs..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-400/20 transition-all duration-300"
+            />
+          </div>
 
-  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newVolume = parseFloat(e.target.value);
-    setVolume(newVolume);
-    if (audioRef.current) {
-      audioRef.current.volume = newVolume;
-    }
-  };
-
-  const handleProgressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newTime = parseFloat(e.target.value);
-    setCurrentTime(newTime);
-    if (audioRef.current) {
-      audioRef.current.currentTime = newTime;
-    }
-  };
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const updateTime = () => setCurrentTime(audio.currentTime);
-    const updateDuration = () => setDuration(audio.duration);
-    const handleEnded = () => {
-      setIsPlaying(false);
-      nextSong();
-    };
-
-    audio.addEventListener('timeupdate', updateTime);
-    audio.addEventListener('loadedmetadata', updateDuration);
-    audio.addEventListener('ended', handleEnded);
-    audio.volume = volume;
-
-    return () => {
-      audio.removeEventListener('timeupdate', updateTime);
-      audio.removeEventListener('loadedmetadata', updateDuration);
-      audio.removeEventListener('ended', handleEnded);
-    };
-  }, [currentSong, volume]);
-
-  return (
-    <section id="playlist" className="py-20">
-      <div className={`transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} ref={ref}>
-        <h2 className="text-4xl font-dancing text-center text-pink-400 mb-12 relative">
-          Our Playlist
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-pink-400 to-teal-400 rounded-full"></div>
-        </h2>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl">
-            <p className="text-center text-white/80 mb-8 text-lg">Songs that tell our story</p>
+          {/* Current Song Display */}
+          <div className="text-center mb-8 p-6 bg-white/5 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-semibold text-white mb-2">{songs[currentSong]?.title || 'No Song Selected'}</h3>
+            <p className="text-white/60 mb-4">{songs[currentSong]?.artist || 'Unknown Artist'}</p>
             
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60" />
+            {/* Progress Bar */}
+            <div className="mb-4">
               <input
-                type="text"
-                placeholder="Search songs..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-400/20 transition-all duration-300"
+                type="range"
+                min="0"
+                max={duration || 0}
+                value={currentTime}
+                onChange={handleProgressChange}
+                className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
               />
+              <div className="flex justify-between text-sm text-white/60 mt-2">
+                <span>{formatTime(currentTime)}</span>
+                <span>{formatTime(duration)}</span>
+              </div>
             </div>
 
-            {/* Current Song Display */}
-            <div className="text-center mb-8 p-6 bg-white/5 rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-semibold text-white mb-2">{songs[currentSong]?.title || 'No Song Selected'}</h3>
-              <p className="text-white/60 mb-4">{songs[currentSong]?.artist || 'Unknown Artist'}</p>
+            {/* Control Buttons */}
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <button
+                onClick={() => setIsShuffled(!isShuffled)}
+                className={`p-2 rounded-full transition-all duration-300 ${
+                  isShuffled ? 'bg-pink-400 text-white' : 'bg-white/10 text-white/60 hover:bg-white/20'
+                }`}
+              >
+                <Shuffle size={20} />
+              </button>
               
-              {/* Progress Bar */}
-              <div className="mb-4">
+              <button
+                onClick={prevSong}
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 text-white"
+              >
+                <SkipBack size={24} />
+              </button>
+              
+              <button
+                onClick={togglePlay}
+                className="w-16 h-16 bg-gradient-to-r from-pink-400 to-teal-400 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg"
+              >
+                {isPlaying ? (
+                  <Pause size={24} className="text-white" />
+                ) : (
+                  <Play size={24} className="text-white ml-1" />
+                )}
+              </button>
+              
+              <button
+                onClick={nextSong}
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 text-white"
+              >
+                <SkipForward size={24} />
+              </button>
+
+              <div className="flex items-center space-x-2">
+                <Volume2 size={20} className="text-white/60" />
                 <input
                   type="range"
                   min="0"
-                  max={duration || 0}
-                  value={currentTime}
-                  onChange={handleProgressChange}
-                  className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
+                  max="1"
+                  step="0.1"
+                  value={volume}
+                  onChange={handleVolumeChange}
+                  className="w-20 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
                 />
-                <div className="flex justify-between text-sm text-white/60 mt-2">
-                  <span>{formatTime(currentTime)}</span>
-                  <span>{formatTime(duration)}</span>
-                </div>
               </div>
-
-              {/* Control Buttons */}
-              <div className="flex items-center justify-center space-x-4 mb-4">
-                <button
-                  onClick={() => setIsShuffled(!isShuffled)}
-                  className={`p-2 rounded-full transition-all duration-300 ${
-                    isShuffled ? 'bg-pink-400 text-white' : 'bg-white/10 text-white/60 hover:bg-white/20'
+            </div>
+          </div>
+          
+          {/* Playlist */}
+          <div className="max-h-96 overflow-y-auto space-y-2 custom-scrollbar">
+            {filteredSongs.map((song, index) => {
+              const actualIndex = songs.findIndex(s => s === song);
+              return (
+                <div
+                  key={`${song.src}-${index}`}
+                  onClick={() => selectSong(index)}
+                  className={`flex items-center p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-white/10 ${
+                    currentSong === actualIndex ? 'bg-white/10 border border-pink-400/30' : 'hover:translate-x-2'
                   }`}
                 >
-                  <Shuffle size={20} />
-                </button>
-                
-                <button
-                  onClick={prevSong}
-                  className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 text-white"
-                >
-                  <SkipBack size={24} />
-                </button>
-                
-                <button
-                  onClick={togglePlay}
-                  className="w-16 h-16 bg-gradient-to-r from-pink-400 to-teal-400 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg"
-                >
-                  {isPlaying ? (
-                    <Pause size={24} className="text-white" />
-                  ) : (
-                    <Play size={24} className="text-white ml-1" />
-                  )}
-                </button>
-                
-                <button
-                  onClick={nextSong}
-                  className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 text-white"
-                >
-                  <SkipForward size={24} />
-                </button>
-
-                <div className="flex items-center space-x-2">
-                  <Volume2 size={20} className="text-white/60" />
-                  <input
-                    type="range"
-                    min="0"
-                    max="1"
-                    step="0.1"
-                    value={volume}
-                    onChange={handleVolumeChange}
-                    className="w-20 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
-                  />
-                </div>
-              </div>
-            </div>
-            
-            {/* Playlist */}
-            <div className="max-h-96 overflow-y-auto space-y-2 custom-scrollbar">
-              {filteredSongs.map((song, index) => {
-                const actualIndex = songs.findIndex(s => s === song);
-                return (
-                  <div
-                    key={`${song.src}-${index}`}
-                    onClick={() => selectSong(index)}
-                    className={`flex items-center p-4 rounded-xl cursor-pointer transition-all duration-300 hover:bg-white/10 ${
-                      currentSong === actualIndex ? 'bg-white/10 border border-pink-400/30' : 'hover:translate-x-2'
-                    }`}
-                  >
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-4 ${
-                      currentSong === actualIndex ? 'bg-pink-400' : 'bg-white/10'
-                    }`}>
-                      <span className="text-white font-semibold text-sm">{index + 1}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-white font-medium truncate">{song.title}</h4>
-                      <p className="text-white/60 text-sm truncate">{song.artist}</p>
-                    </div>
-                    <div className="text-white/40 text-sm mr-4">{song.duration}</div>
-                    <Heart size={16} className="text-pink-400 flex-shrink-0" />
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-4 ${
+                    currentSong === actualIndex ? 'bg-pink-400' : 'bg-white/10'
+                  }`}>
+                    <span className="text-white font-semibold text-sm">{index + 1}</span>
                   </div>
-                );
-              })}
-            </div>
-            
-            {filteredSongs.length === 0 && (
-              <div className="text-center py-8">
-                <p className="text-white/60">No songs found matching your search.</p>
-              </div>
-            )}
-            
-            {/* Hidden audio element */}
-            <audio 
-              ref={audioRef} 
-              className="hidden"
-              src={songs[currentSong]?.src}
-            />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-white font-medium truncate">{song.title}</h4>
+                    <p className="text-white/60 text-sm truncate">{song.artist}</p>
+                  </div>
+                  <div className="text-white/40 text-sm mr-4">{song.duration}</div>
+                  <Heart size={16} className="text-pink-400 flex-shrink-0" />
+                </div>
+              );
+            })}
           </div>
+          
+          {filteredSongs.length === 0 && (
+            <div className="text-center py-8">
+              <p className="text-white/60">No songs found matching your search.</p>
+            </div>
+          )}
+          
+          {/* Hidden audio element */}
+          <audio 
+            ref={audioRef} 
+            className="hidden"
+            src={songs[currentSong]?.src}
+          />
         </div>
       </div>
+    </div>
 
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(255, 107, 107, 0.6);
-          border-radius: 3px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(255, 107, 107, 0.8);
-        }
-        
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: #ff6b6b;
-          cursor: pointer;
-          border: 2px solid white;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-        
-        .slider::-moz-range-thumb {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: #ff6b6b;
-          cursor: pointer;
-          border: 2px solid white;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-      `}</style>
-    </section>
-  );
+    <style jsx>{`
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 107, 107, 0.6);
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 107, 107, 0.8);
+      }
+      
+      .slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #ff6b6b;
+        cursor: pointer;
+        border: 2px solid white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+      
+      .slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #ff6b6b;
+        cursor: pointer;
+        border: 2px solid white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+    `}</style>
+  </section>
+);
 };
-
 export default MusicPlayer;

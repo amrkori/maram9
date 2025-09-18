@@ -7,28 +7,35 @@ const Timeline: React.FC = () => {
 
   const timelineEvents = [
     {
-      date: '2 June 2021',
+      
+      date: ' September 2019',
       title: 'Having Feelings for You',
       description: 'At first, I didn\'t notice, but as time went by, I started falling for you.',
       side: 'left'
     },
     {
-      date: 'October 2024',
-      title: 'Confessing My Feelings',
-      description: 'This is when I confessed my feelings, and you said I was joking hahaha.',
+      date: '9 December 2019',
+      title: 'First Message On instagram',
+      description: 'This is when I confessed my feelings, and i said Maram🌑',
       side: 'right'
     },
-    {
-      date: 'December 2024',
-      title: 'First "I Love You" and You Became My BF',
-      description: 'It\'s when you said we\'re officially together and told U "I love you" for the first time hahaha.',
+        {
+      date: '22 Sep 2020',
+      title: 'First i said Happy birthday to my lovely maramy',
+      description: 'It\'s when you dont reply any thing to this meesage - my sweetie 16.',
       side: 'left'
+    },
+    {
+      date: '2 June 2021',
+      title: 'First "I talk You" and You Became not only My BF but everything',
+      description: 'It\'s when you said hahaha\'re together and talk to the morning.',
+      side: 'right'
     },
     {
       date: 'To Infinity',
       title: 'Forever Us',
       description: 'Because this story doesn\'t end. It\'s just beginning…',
-      side: 'right'
+      side: 'left'
     }
   ];
 

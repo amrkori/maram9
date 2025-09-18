@@ -7,16 +7,16 @@ const LoveNotes: React.FC = () => {
 
   const notes = [
     {
-      date: 'February 14, 2025',
-      content: 'Happy Valentine\'s Day to you my one and only. I will always be here for you in ups and downs. I will never drift away and I assure you that I\'m here to stay.'
+      date: 'September 22, 2020',
+      content: 'Wish you a beautiful day with happines for ever💕i wish you happiness and success in every step of your way 💙... with ur beautiful eyes ur smile everything in you seems perfect u are perfect for me, i hope to be my sweetie friend on a day💛💛🌏'
     },
     {
-      date: 'February 25, 2025',
-      content: 'Three months with you feel like both a second and a lifetime. From our jokes to our deep talks, every second is magic. I LOVE YOUUU MAHAL KO!'
+      date: 'September 22, 2023',
+      content: 'This day is my special day.I Dont Know What To Write To Let Know What You Mean To Me You Will Always Be Something special In My Heart.Your birthday is as beautiful and full of love as you are. You deserve only the best,and wish that for you best wishes,Maromii. And hope all your wishes come true on this special day.Sweettie19🤩🤩🤩🤩'
     },
     {
-      date: 'March 1, 2025',
-      content: 'Every sunrise reminds me of your smile, and every sunset makes me grateful for another day with you. You are my everything, Maramy.'
+      date: 'September 22, 2024',
+      content: 'This for maram’s notes😂🤍 The special one ☝ The one The only The first & the last Happy Birthday Maromii🤍'
     },
     {
       date: 'Today',

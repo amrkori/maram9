@@ -106,7 +106,7 @@ const SurpriseCountdown: React.FC = () => {
           {showSurprise && (
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl animate-fadeIn">
               <h3 className="text-2xl text-pink-400 mb-6">Pick Our Special Day</h3>
-              <p className="text-white/80 mb-1 text-lg">Choose the perfect day to meet ❤️</p>
+              <p className="text-white/80 mb-1 text-lg">Choose only the perfect day to meet ❤️</p>
               <p className="text-white/80 mb-6 text-lg">I want to give U something Special for U</p>
 
 

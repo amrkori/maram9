@@ -29,7 +29,7 @@ const SharedInterests: React.FC = () => {
       id: 'drinks',
       icon: Coffee,
       title: 'Cozy Drinks',
-      items: ['Mangoooo juice', 'Nescafe', 'gawafaa', 'Mix chocolate','pepsi - but Nooo','Qasb', 'Farwla Juice','balah blabn ','Mango sobiaa']
+      items: ['Mangoooo juice', 'Tea', 'gawafaa', 'Mix chocolate','pepsi - but Nooo','Qasb', 'Farwla Juice','balah blabn ','Mango sobiaa']
     },
     /*{
       id: 'music',
