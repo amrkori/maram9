@@ -318,7 +318,12 @@ const MusicPlayer: React.FC = () => {
       "duration": "4:02",
       "src": `${import.meta.env.BASE_URL}songs/Behom_Kolohom_Albumaty.Com.mp3`
   },
-
+    {
+      "title": "Zay El-Shams",
+      "artist": "Ramy Gamal",
+      "duration": "4:29",
+      "src": `${import.meta.env.BASE_URL}songs/07.Zay_El-Shams.mp3`
+    },
 
 
 
@@ -939,12 +944,7 @@ const MusicPlayer: React.FC = () => {
       "duration": "4:07",
       "src": `${import.meta.env.BASE_URL}songs/02.Bahibak.mp3`
     },
-        {
-      "title": "Shams",
-      "artist": "Mayada El Hennawy",
-      "duration": "4:29",
-      "src": `${import.meta.env.BASE_URL}songs/07.Zay_El-Shams.mp3`
-    },
+    
 
     {
       "title": "7lwa ya balady",
