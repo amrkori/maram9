@@ -324,6 +324,12 @@ const MusicPlayer: React.FC = () => {
       "duration": "4:29",
       "src": `${import.meta.env.BASE_URL}songs/07.Zay_El-Shams.mp3`
     },
+    {
+    "title": "Ewediny",
+    "artist": "Ramy Gamal",
+    "duration": "5:43",
+    "src": `${import.meta.env.BASE_URL}songs/01_-_Ewediny.mp3`
+  },
 
 
 
