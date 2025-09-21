@@ -222,6 +222,12 @@ const MusicPlayer: React.FC = () => {
       "duration": "3:17",
       "src":`${import.meta.env.BASE_URL}songs/13._Taali.mp3`
     },
+      {
+    "title": "Matkhafesh",
+    "artist": "Amr Diab",
+    "duration": "5:54",
+    "src":`${import.meta.env.BASE_URL}songs/01.Matkhafesh.mp3`
+  },
 
 
 
@@ -295,7 +301,13 @@ const MusicPlayer: React.FC = () => {
       "duration": "3:41",
       "src": `${import.meta.env.BASE_URL}songs/12._Ahla_Haga_Feeky.mp3`
     },
+  {
+    "title": "Kanet Henak",
+    "artist": "Hamaki",
+    "duration": "4:57",
+    "src": `${import.meta.env.BASE_URL}songs/Hamaki_-_Kanet_Henak.mp3`
 
+  },
 
 
 
@@ -951,7 +963,12 @@ const MusicPlayer: React.FC = () => {
       "src": `${import.meta.env.BASE_URL}songs/02.Bahibak.mp3`
     },
     
-
+  {
+    "title": "Bil9alb 5alini",
+    "artist": "Magda ElRomy",
+    "duration": "4:29",
+    "src": `${import.meta.env.BASE_URL}songs/Bi_l9alb_5alini.mp3`
+  },
     {
       "title": "7lwa ya balady",
       "artist": "Dalida",
