@@ -246,7 +246,12 @@ const MusicPlayer: React.FC = () => {
 
 
 
-
+  {
+    "title": "Men Awal Marra",
+    "artist": "Ur Favourite Film",
+    "duration": "3:26",
+    "src": `${import.meta.env.BASE_URL}songs/Nghmat.Com_Mahmoud.El.Esseily_Men.Awal.Marra.mp3`
+  },
     {
       "title": "Ehsas Ghareb",
       "artist": "Ur Favourite Film",
@@ -271,6 +276,7 @@ const MusicPlayer: React.FC = () => {
       "duration": "4:43",
       "src": `${import.meta.env.BASE_URL}songs/40Z884Iu.mp3`
     },
+    
 
 
 
